@@ -15,7 +15,7 @@
         }
         h1, h2, h3 {
             font-family: 'Georgia', serif;
-            color: #d4af37; /* Color dorado */
+            color: #d4af37;
         }
         p {
             line-height: 1.6;
@@ -68,7 +68,7 @@
             font-weight: bold;
         }
 
-        /* REPRODUCTOR DE VIDEO PERSONALIZADO (Autoplay, sin controles, botón de audio) */
+        /* REPRODUCTOR DE VIDEO PERSONALIZADO (Sin pausa, solo audio) */
         .custom-video-wrapper {
             position: relative;
             width: 100%;
@@ -81,7 +81,7 @@
         .custom-video-wrapper video {
             width: 100%;
             display: block;
-            pointer-events: none; /* Evita que el usuario pause dándole clic al video */
+            pointer-events: none; /* Esto bloquea el clic de pausa o reproducir */
         }
         .mute-btn {
             position: absolute;
@@ -103,7 +103,7 @@
             color: #000;
         }
 
-        /* Secciones de video individuales */
+        /* Contenedores de video */
         .video-destacado-section {
             padding: 60px 8%;
             background-color: #0a0a0a;
@@ -166,7 +166,6 @@
         .servicios-imagen img {
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
         .servicios-lista {
             flex: 1.5;
@@ -216,7 +215,6 @@
         .repertorio-musica-imagen img {
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
         .columnas-canciones {
             flex: 2;
@@ -236,7 +234,7 @@
             color: #cccccc;
         }
 
-        /* Sección Nuestras Presentaciones (Grid de 4 videos) */
+        /* Grid Nuestras Presentaciones */
         .presentaciones-section {
             padding: 80px 8%;
             background-color: #050505;
@@ -249,7 +247,7 @@
             margin: 0 auto;
         }
 
-        /* Botón Flotante de WhatsApp */
+        /* Botón de WhatsApp */
         .whatsapp-btn {
             position: fixed;
             bottom: 30px;
@@ -271,9 +269,6 @@
             .video-grid {
                 grid-template-columns: 1fr;
             }
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
         }
     </style>
 </head>
@@ -289,10 +284,11 @@
         </div>
     </header>
 
-    <!-- VIDEO 1: DEBAJO DEL HEADER -->
+    <!-- VIDEO 1: ENTRE HEADER E HISTORIA -->
     <section class="video-destacado-section">
         <div class="video-destacado-container">
             <div class="custom-video-wrapper">
+                <!-- Enlace original provisto: https://drive.google.com/file/d/1dc9bp4EOgFe5JUpcyf96ahTrYp1N1INh/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
                     <source src="https://drive.google.com/uc?export=download&id=1dc9bp4EOgFe5JUpcyf96ahTrYp1N1INh" type="video/mp4">
                 </video>
@@ -316,10 +312,11 @@
         </div>
     </section>
 
-    <!-- VIDEO 2: NUEVO VIDEO ENTRE HISTORIA Y SERVICIOS -->
+    <!-- VIDEO 2: ENTRE HISTORIA Y SERVICIOS -->
     <section class="video-destacado-section" style="padding-top: 20px;">
         <div class="video-destacado-container">
             <div class="custom-video-wrapper">
+                <!-- Enlace original provisto: https://drive.google.com/file/d/1VrbZcuXU-9PRXuKGlEDqO0RO2hIgiaXU/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
                     <source src="https://drive.google.com/uc?export=download&id=1VrbZcuXU-9PRXuKGlEDqO0RO2hIgiaXU" type="video/mp4">
                 </video>
@@ -403,7 +400,7 @@
         </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: NUESTRAS PRESENTACIONES -->
+    <!-- SECCIÓN NUESTRAS PRESENTACIONES -->
     <section class="presentaciones-section">
         <div class="section-title">
             <h2>Nuestras Presentaciones</h2>
@@ -412,6 +409,7 @@
         <div class="video-grid">
             <!-- Presentación 1 -->
             <div class="custom-video-wrapper">
+                <!-- Original: https://drive.google.com/file/d/1mARiP9jLlVzFWj4kBxI31bopGmAVnIjl/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
                     <source src="https://drive.google.com/uc?export=download&id=1mARiP9jLlVzFWj4kBxI31bopGmAVnIjl" type="video/mp4">
                 </video>
@@ -420,6 +418,7 @@
             
             <!-- Presentación 2 -->
             <div class="custom-video-wrapper">
+                <!-- Original: https://drive.google.com/file/d/1WVTB6jJosrMZYP0gFxkQ1d4EOc2cSxFH/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
                     <source src="https://drive.google.com/uc?export=download&id=1WVTB6jJosrMZYP0gFxkQ1d4EOc2cSxFH" type="video/mp4">
                 </video>
@@ -428,6 +427,7 @@
 
             <!-- Presentación 3 -->
             <div class="custom-video-wrapper">
+                <!-- Original: https://drive.google.com/file/d/1SaVpZseJICK1kmAjXlWiPcJJPB4Ut69Z/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
                     <source src="https://drive.google.com/uc?export=download&id=1SaVpZseJICK1kmAjXlWiPcJJPB4Ut69Z" type="video/mp4">
                 </video>
@@ -436,6 +436,7 @@
 
             <!-- Presentación 4 -->
             <div class="custom-video-wrapper">
+                <!-- Original: https://drive.google.com/file/d/1_1LfQ23kuUh1G8PDRMfRj0ZqwLErNY3x/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
                     <source src="https://drive.google.com/uc?export=download&id=1_1LfQ23kuUh1G8PDRMfRj0ZqwLErNY3x" type="video/mp4">
                 </video>
@@ -456,8 +457,6 @@
             if (video.muted) {
                 video.muted = false;
                 btn.innerHTML = '🔈 Silenciar';
-                // Opcional: Descomenta la siguiente línea si quieres que al desmutear uno, se muteen los demás
-                // muteOtherVideos(video);
             } else {
                 video.muted = true;
                 btn.innerHTML = '🔊 Activar Sonido';
