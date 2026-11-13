@@ -67,6 +67,26 @@
             font-weight: bold;
         }
 
+        /* NUEVA SECCIÓN: Video Destacado (Entre Header e Historia) */
+        .video-destacado-section {
+            padding: 60px 8%;
+            background-color: #0a0a0a; /* Fondo oscuro para resaltar */
+            text-align: center;
+        }
+        .video-destacado-container {
+            max-width: 900px; /* Tamaño máximo para que se vea en alta calidad */
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            border: 1px solid #333;
+        }
+        .video-destacado-container video {
+            width: 100%;
+            display: block;
+            background-color: #000;
+        }
+
         /* Sección Nuestra Historia */
         .historia {
             padding: 80px 8%;
@@ -189,7 +209,7 @@
             color: #cccccc;
         }
 
-        /* Sección Videos (Presentaciones) */
+        /* Sección Videos (Presentaciones extras) */
         .videos-section {
             padding: 80px 8%;
             background-color: #0a0a0a;
@@ -239,7 +259,6 @@
     <!-- SECCIÓN INICIO / HEADER -->
     <header class="hero">
         <div class="hero-content">
-            <!-- AQUÍ ESTÁ EL CAMBIO: Logo.png con mayúscula -->
             <img src="Logo.png" alt="Trimariachi Familiar Logo" class="logo">
             
             <h1>Trimariachi Familiar</h1>
@@ -247,6 +266,17 @@
             <p class="highlight">Más de 40 años de experiencia nos respaldan.</p>
         </div>
     </header>
+
+    <!-- NUEVO: SECCIÓN VIDEO DESTACADO (Justo debajo del header) -->
+    <section class="video-destacado-section">
+        <div class="video-destacado-container">
+            <video controls>
+                <!-- Asegúrate de que tu archivo de video se llame exactamente Video.4.mp4 -->
+                <source src="Video.4.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de este video.
+            </video>
+        </div>
+    </section>
 
     <!-- SECCIÓN NUESTRA HISTORIA -->
     <section class="historia">
@@ -307,12 +337,10 @@
         </div>
         
         <div class="repertorio-musica-wrapper">
-            <!-- Imagen agregada de la guitarra -->
             <div class="repertorio-musica-imagen">
                 <img src="Guitarra.jpg" alt="Mariachi con guitarra">
             </div>
 
-            <!-- Columnas de canciones -->
             <div class="columnas-canciones">
                 <!-- Columna 1 -->
                 <ul>
@@ -352,25 +380,18 @@
             <hr>
         </div>
         <div class="video-grid">
-            <!-- Video 1 -->
             <video controls>
                 <source src="nombredetuvideo1.mp4" type="video/mp4">
                 Tu navegador no soporta videos.
             </video>
-            
-            <!-- Video 2 -->
             <video controls>
                 <source src="nombredetuvideo2.mp4" type="video/mp4">
                 Tu navegador no soporta videos.
             </video>
-
-            <!-- Video 3 -->
             <video controls>
                 <source src="nombredetuvideo3.mp4" type="video/mp4">
                 Tu navegador no soporta videos.
             </video>
-
-            <!-- Video 4 -->
             <video controls>
                 <source src="nombredetuvideo4.mp4" type="video/mp4">
                 Tu navegador no soporta videos.
