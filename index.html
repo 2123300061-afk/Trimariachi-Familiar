@@ -67,24 +67,26 @@
             font-weight: bold;
         }
 
-        /* NUEVA SECCIÓN: Video Destacado (Entre Header e Historia) */
+        /* SECCIÓN VIDEO DESTACADO (Google Drive) */
         .video-destacado-section {
             padding: 60px 8%;
-            background-color: #0a0a0a; /* Fondo oscuro para resaltar */
+            background-color: #0a0a0a;
             text-align: center;
         }
         .video-destacado-container {
-            max-width: 900px; /* Tamaño máximo para que se vea en alta calidad */
+            max-width: 900px;
             margin: 0 auto;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
             border: 1px solid #333;
-        }
-        .video-destacado-container video {
-            width: 100%;
-            display: block;
             background-color: #000;
+        }
+        .video-destacado-container iframe {
+            width: 100%;
+            aspect-ratio: 16/9; /* Mantiene el formato panorámico */
+            display: block;
+            border: none;
         }
 
         /* Sección Nuestra Historia */
@@ -168,7 +170,7 @@
             text-transform: uppercase;
         }
 
-        /* Sección Repertorio Musical (Imagen + 3 Columnas) */
+        /* Sección Repertorio Musical */
         .lista-canciones-section {
             padding: 80px 8%;
             background-color: #111111;
@@ -209,7 +211,7 @@
             color: #cccccc;
         }
 
-        /* Sección Videos (Presentaciones extras) */
+        /* Sección Videos Extras */
         .videos-section {
             padding: 80px 8%;
             background-color: #0a0a0a;
@@ -267,14 +269,10 @@
         </div>
     </header>
 
-    <!-- NUEVO: SECCIÓN VIDEO DESTACADO (Justo debajo del header) -->
+    <!-- SECCIÓN VIDEO DESTACADO (Google Drive) -->
     <section class="video-destacado-section">
         <div class="video-destacado-container">
-            <video controls>
-                <!-- Asegúrate de que tu archivo de video se llame exactamente Video.4.mp4 -->
-                <source src="Video.4.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de este video.
-            </video>
+            <iframe src="https://drive.google.com/file/d/1dc9bp4EOgFe5JUpcyf96ahTrYp1N1INh/preview" allow="autoplay" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -342,7 +340,6 @@
             </div>
 
             <div class="columnas-canciones">
-                <!-- Columna 1 -->
                 <ul>
                     <li>17 años</li>
                     <li>A mi manera</li>
@@ -351,7 +348,6 @@
                     <li>Cien años</li>
                     <li>Como fui a enamorarme</li>
                 </ul>
-                <!-- Columna 2 -->
                 <ul>
                     <li>El rey</li>
                     <li>El sinaloense</li>
@@ -360,7 +356,6 @@
                     <li>La Bikina</li>
                     <li>La media vuelta</li>
                 </ul>
-                <!-- Columna 3 -->
                 <ul>
                     <li>Piel canela</li>
                     <li>Piensa en mi</li>
@@ -373,7 +368,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN VIDEOS (Nuestras Presentaciones) -->
+    <!-- SECCIÓN VIDEOS (Nuestras Presentaciones extras) -->
     <section class="videos-section">
         <div class="section-title">
             <h2>Nuestras Presentaciones</h2>
