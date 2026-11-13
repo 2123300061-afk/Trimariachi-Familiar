@@ -3,521 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trimariachi Familiar | Elegancia y Tradición</title>
-    <!-- Fuentes de Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Iconos de FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>Trimariachi Familiar</title>
     <style>
-        :root {
-            --bg-color: #0a0a0a;
-            --text-color: #ffffff;
-            --gold: #D4AF37;
-            --gold-hover: #b5952f;
-            --dark-gray: #1a1a1a;
-        }
-
-        * {
+        /* Estilos generales */
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
         }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
         h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--gold);
+            font-family: 'Georgia', serif;
+            color: #d4af37; /* Color dorado */
+        }
+        p {
+            line-height: 1.6;
+            color: #cccccc;
         }
 
-        /* Utilidad de Animación */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* HERO - MODIFICADO PARA ALINEAR A LA DERECHA */
+        /* Sección Header / Inicio (Alineado a la izquierda) */
         .hero {
+            /* Asegúrate de que el nombre del fondo coincida con tu archivo en GitHub */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('fondo_mariachi.jpg') center/cover;
             height: 100vh;
             display: flex;
-            justify-content: flex-end; /* Alinea el contenido a la derecha */
             align-items: center;
+            justify-content: flex-start; /* Alinea el contenido a la izquierda */
             padding: 0 8%;
-            /* El gradiente es transparente a la izquierda (donde están los mariachis) y oscuro a la derecha (donde está el texto) */
-            background: linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.9) 65%), url('fondo_mariachi.jpg') center left/cover no-repeat;
         }
-
         .hero-content {
-            max-width: 500px; /* Controla el ancho de la caja de texto en la derecha */
-            text-align: center; /* Centra el logo y texto dentro de su columna derecha */
+            max-width: 600px;
+            text-align: left; /* Texto a la izquierda */
         }
-
-        .logo-hero {
-            max-width: 280px;
-            margin-bottom: 1.5rem;
+        .hero-content img.logo {
+            max-width: 250px;
+            margin-bottom: 20px;
         }
-
-        .hero h1 {
+        .hero-content h1 {
             font-size: 3.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+            margin: 0 0 15px 0;
             line-height: 1.1;
         }
-
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-        }
-
-        .hero .highlight {
-            color: var(--gold);
-            font-weight: 600;
-            font-size: 1.4rem;
-        }
-
-        /* SECCIONES COMUNES */
-        section {
-            padding: 5rem 10%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 3px;
-            background-color: var(--gold);
-            display: block;
-            margin: 15px auto 0;
-        }
-
-        /* ZONAS DE COBERTURA Y ATENCIÓN */
-        .coverage-banner {
-            background-color: var(--gold);
-            color: #000;
-            text-align: center;
-            padding: 2rem;
-            font-weight: 600;
+        .hero-content .subtitle {
             font-size: 1.2rem;
+            margin-bottom: 20px;
         }
-        
-        .coverage-banner i {
-            margin-right: 10px;
+        .hero-content .highlight {
+            font-size: 1.3rem;
+            color: #d4af37;
+            font-weight: bold;
         }
 
-        /* INFORMACIÓN (PRECIO Y PUNTUALIDAD) */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        /* Sección Nuestra Historia (Texto izq, Imagen der) */
+        .historia {
+            padding: 80px 8%;
+            background-color: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .historia-texto {
+            flex: 1;
+            min-width: 300px;
+        }
+        .historia-texto h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .historia-texto p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .historia-imagen {
+            flex: 1;
+            min-width: 300px;
             text-align: center;
         }
-
-        .info-card {
-            background-color: var(--dark-gray);
-            padding: 3rem 2rem;
+        .historia-imagen img {
+            max-width: 100%;
             border-radius: 10px;
-            border-bottom: 3px solid var(--gold);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
 
-        .info-card:hover {
-            transform: translateY(-10px);
+        /* Sección Repertorio (Imagen izq, Tarjetas der) */
+        .repertorio-section {
+            padding: 80px 8%;
+            background-color: #0a0a0a;
         }
-
-        .info-icon {
-            font-size: 3rem;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
+        .repertorio-header {
+            text-align: center;
+            margin-bottom: 50px;
         }
-
-        /* SERVICIOS / REPERTORIO MUSICAL */
-        .services-container {
-            max-width: 900px;
-            margin: 0 auto;
+        .repertorio-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .repertorio-header hr {
+            width: 80px;
+            border: 1px solid #d4af37;
+            margin: 0 auto 20px auto;
         }
         
-        .services-intro {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-style: italic;
-            color: #ccc;
-        }
-
-        .service-item {
+        .repertorio-container {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 2.5rem;
-            background: var(--dark-gray);
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--gold);
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap;
         }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--gold);
-            margin-right: 2rem;
-            min-width: 50px;
+        .repertorio-imagen {
+            flex: 1;
+            min-width: 300px;
         }
-
-        /* LISTA DE REPERTORIO */
-        .repertoire-list {
-            column-count: 3;
-            column-gap: 2rem;
-            list-style: none;
-        }
-
-        .repertoire-list li {
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-            position: relative;
-            padding-left: 20px;
-            break-inside: avoid;
-        }
-
-        .repertoire-list li::before {
-            content: '•';
-            color: var(--gold);
-            position: absolute;
-            left: 0;
-            font-size: 1.5rem;
-            line-height: 1;
-        }
-
-        /* GALERÍA DE FOTOS */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .gallery-grid img {
+        .repertorio-imagen img {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid #333;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
-
-        .gallery-grid img:hover {
-            transform: scale(1.05);
-            border-color: var(--gold);
-            z-index: 2;
-            position: relative;
+        .repertorio-lista {
+            flex: 1.5;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
-
-        /* VIDEOS */
-        .videos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .tarjeta {
+            background-color: #1a1a1a;
+            border-left: 4px solid #d4af37;
+            padding: 25px;
+            border-radius: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
         }
-        
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            background: #222;
-            border: 2px solid var(--gold);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* RESPONSIVE MÓVIL */
-        @media (max-width: 768px) {
-            .hero {
-                justify-content: center; /* En celular se centra todo para que quepa */
-                background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('fondo_mariachi.jpg') center/cover no-repeat;
-            }
-            .hero-content {
-                padding: 20px;
-            }
-            .repertoire-list { column-count: 1; }
-            .hero h1 { font-size: 2.5rem; }
-            .service-item { flex-direction: column; text-align: center; }
-            .service-icon { margin: 0 auto 1rem auto; }
-        }
-
-        /* FOOTER Y REDES SOCIALES */
-        footer {
-            background-color: #050505;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid #333;
-        }
-
-        .social-links {
-            margin-bottom: 1.5rem;
-        }
-
-        .social-links a {
-            color: var(--text-color);
+        .tarjeta-icono {
             font-size: 2rem;
-            margin: 0 15px;
-            transition: color 0.3s ease;
+            color: #d4af37;
+        }
+        .tarjeta-contenido h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            text-transform: uppercase;
+        }
+        .tarjeta-contenido p {
+            margin: 0;
+            font-size: 0.95rem;
         }
 
-        .social-links a:hover {
-            color: var(--gold);
-        }
-
-        /* BOTÓN FLOTANTE WHATSAPP */
-        .whatsapp-float {
+        /* Botón Flotante de WhatsApp */
+        .whatsapp-btn {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background-color: #25D366;
+            background-color: #25d366;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 24px;
             border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1rem;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            font-weight: bold;
             display: flex;
             align-items: center;
             gap: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.3s;
             z-index: 1000;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.05);
-            background-color: #20b858;
-            color: white;
+        /* Responsividad para celulares */
+        @media (max-width: 768px) {
+            .historia, .repertorio-container {
+                flex-direction: column;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- El Header se removió de aquí porque el logo se movió al lado derecho en el Hero -->
-
-    <section class="hero">
-        <!-- Contenedor alineado a la derecha -->
-        <div class="hero-content fade-in">
-            <img src="Trimariachi.png" alt="Trimariachi Familiar Logo" class="logo-hero">
+    <!-- SECCIÓN INICIO / HEADER -->
+    <header class="hero">
+        <div class="hero-content">
+            <!-- Imagen del Logo -->
+            <img src="logo.png" alt="Trimariachi Familiar Logo" class="logo">
+            
             <h1>Trimariachi Familiar</h1>
-            <p>Elegancia, confianza y el mejor entretenimiento para tus eventos más especiales.</p>
+            <p class="subtitle">Elegancia, confianza y el mejor entretenimiento para tus eventos más especiales.</p>
             <p class="highlight">Más de 40 años de experiencia nos respaldan.</p>
         </div>
-    </section>
+    </header>
 
-    <div class="coverage-banner fade-in">
-        <p><i class="fas fa-clock"></i> Atención las 24 Hrs</p>
-        <p><i class="fas fa-map-marker-alt"></i> Cobertura exclusiva en: Guadalajara, Tlaquepaque, Zapopan, Tonalá, Tlajomulco y El Salto.</p>
-    </div>
-
-    <!-- SECCIÓN DE GARANTÍAS -->
-    <section>
-        <h2 class="section-title fade-in">Nuestro Compromiso</h2>
-        <div class="info-grid">
-            <div class="info-card fade-in">
-                <i class="fas fa-dollar-sign info-icon"></i>
-                <h3>PRECIO</h3>
-                <p>El mejor precio del mercado, ponte en contacto con nosotros y compruébalo.</p>
-            </div>
-            <div class="info-card fade-in">
-                <i class="far fa-clock info-icon"></i>
-                <h3>PUNTUALIDAD</h3>
-                <p>Somos puntuales en nuestro arribo, brindando un trato amable.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE SERVICIOS -->
-    <section style="background-color: #111;">
-        <div class="services-container">
-            <h2 class="section-title fade-in" style="color: var(--text-color);">AMPLIO REPERTORIO MUSICAL</h2>
-            <p class="services-intro fade-in">Explora nuestra página, si tienes alguna duda estamos a tus órdenes para ayudarte</p>
-            
-            <div class="service-item fade-in">
-                <i class="fas fa-music service-icon"></i>
-                <div class="service-content">
-                    <h3 style="color: var(--text-color);">TRIO VERSÁTIL</h3>
-                    <p>Con más de 40 años de experiencia nos hemos convertido en el grupo musical favorito de Guadalajara, interpretando un amplio repertorio.</p>
-                </div>
-            </div>
-
-            <div class="service-item fade-in">
-                <i class="fas fa-music service-icon"></i>
-                <div class="service-content">
-                    <h3 style="color: var(--text-color);">TRIO ROMÁNTICO</h3>
-                    <p>Si quieres sorprender, dar un pequeño detalle romántico a algún ser querido, somos tu mejor opción con nuestro repertorio romántico, esa persona quedara sorprendida.</p>
-                </div>
-            </div>
-
-            <div class="service-item fade-in">
-                <i class="fas fa-music service-icon"></i>
-                <div class="service-content">
-                    <h3 style="color: var(--text-color);">SERENATAS</h3>
-                    <p>Somos un grupo 100% profesional, por eso te colaboramos en esa ocasión especial, con una excelente presencia e interpretación.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE REPERTORIO -->
-    <section>
-        <h2 class="section-title fade-in">Repertorio Musical</h2>
-        <ul class="repertoire-list fade-in">
-            <li>17 años</li>
-            <li>A mi manera</li>
-            <li>Bésame mucho</li>
-            <li>Caminos de Michoacán</li>
-            <li>Candilejas</li>
-            <li>Cha cha cha</li>
-            <li>Coincidir</li>
-            <li>Como fue</li>
-            <li>Como te voy a olvidar</li>
-            <li>Contigo aprendí</li>
-            <li>Corrido de Chihuahua</li>
-            <li>Corrido de Monterrey</li>
-            <li>Delirio</li>
-            <li>El andariego</li>
-            <li>El listón de tu pelo</li>
-            <li>El mariachi loco</li>
-            <li>El milagro de tus ojos</li>
-            <li>El rey</li>
-            <li>El sinaloense</li>
-            <li>Eso y más</li>
-            <li>Gema</li>
-            <li>Hermoso cariño</li>
-            <li>Irresistible</li>
-            <li>La Bikina</li>
-            <li>La chilena</li>
-            <li>La feria de las flores</li>
-            <li>La gloria eres tu</li>
-            <li>La media Vuelta</li>
-            <li>Mi mayor anhelo</li>
-            <li>Mundo raro</li>
-            <li>Música Ligera</li>
-            <li>Nuestro juramento</li>
-            <li>Paloma querida</li>
-            <li>Perfume de gardenia</li>
-            <li>Piel canela</li>
-            <li>Piensa en mí</li>
-            <li>Que chulos ojos</li>
-            <li>Qué lindo es Tepic</li>
-            <li>Reloj</li>
-            <li>Sabes una cosa</li>
-            <li>Sabor a mi</li>
-            <li>Secreto de amor</li>
-            <li>Serenata Huasteca</li>
-            <li>Sin ti</li>
-            <li>Tango uno</li>
-            <li>Tango Volver</li>
-            <li>Tatuajes</li>
-            <li>Tres regalos</li>
-            <li>Tú de que vas</li>
-            <li>Un motivo</li>
-        </ul>
-    </section>
-
-    <!-- GALERÍA DE FOTOS -->
-    <section style="background-color: #111;">
-        <h2 class="section-title fade-in">Nuestra Galería</h2>
-        <div class="gallery-grid fade-in">
-            <!-- Fotos referenciadas localmente -->
-            <img src="foto1.jpg" alt="Mariachi Foto 1" loading="lazy">
-            <img src="foto2.jpg" alt="Mariachi Foto 2" loading="lazy">
-            <img src="foto3.jpg" alt="Mariachi Foto 3" loading="lazy">
-            <img src="foto4.jpg" alt="Mariachi Foto 4" loading="lazy">
-            <img src="foto5.jpg" alt="Mariachi Foto 5" loading="lazy">
-            <img src="foto6.jpg" alt="Mariachi Foto 6" loading="lazy">
-            <img src="foto7.jpg" alt="Mariachi Foto 7" loading="lazy">
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE VIDEOS -->
-    <section>
-        <h2 class="section-title fade-in">Nuestras Presentaciones</h2>
-        <div class="videos-grid fade-in">
-            <!-- Videos de Google Drive integrados con iframe de Preview -->
-            <div class="video-wrapper">
-                <iframe src="https://drive.google.com/file/d/1mARiP9jLlVzFWj4kBxI31bopGmAVnIjl/preview" allow="autoplay"></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://drive.google.com/file/d/1SaVpZseJICK1kmAjXlWiPcJJPB4Ut69Z/preview" allow="autoplay"></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://drive.google.com/file/d/1URmRZ0Dz2Rxz9IORgNAaNWM9ev3uBXF6/preview" allow="autoplay"></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://drive.google.com/file/d/1WVTB6jJosrMZYP0gFxkQ1d4EOc2cSxFH/preview" allow="autoplay"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com/profile.php?id=61579695673649" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/trimariachifamiliar/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p style="color: #666;">© 2026 Trimariachi Familiar. Todos los derechos reservados.</p>
-    </footer>
-
-    <!-- BOTÓN DE WHATSAPP FLOTANTE -->
-    <a href="https://wa.me/5213331193198?text=Hola,%20vengo%20de%20su%20sitio%20web%20y%20me%20gustaría%20reservar%20un%20lugar." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i> Reservar lugar
-    </a>
-
-    <!-- Script para animaciones al hacer scroll -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const faders = document.querySelectorAll('.fade-in');
-            
-            const appearOptions = {
-                threshold: 0.15,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
-            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) {
-                        return;
-                    } else {
-                        entry.target.classList.add('visible');
-                        appearOnScroll.unobserve(entry.target);
-                    }
-                });
-            }, appearOptions);
-
-            faders.forEach(fader => {
-                appearOnScroll.observe(fader);
-            });
-        });
-    </script>
-</body>
-</html> 
+    <!-- NUEVA SECCIÓN: NUESTRA HISTORIA -->
+    <section class="historia">
+        <div class="historia-texto">
+            <h2>Nuestra Historia: Cuatro Décadas Afinadas al Ritmo de tu Familia 🎻✨</h2>
+            <p>Todo comenzó en 1985 con una premisa muy sencilla: la música en vivo no solo se escucha, se siente.</p>
+            <p>Cuando Trimariachi Familiar tocó sus primeros acordes hace casi 40 años, la Zona Metropolitana de Guadalajara era distinta, pero la emoción de las familias tapatías al celebrar la vida sigue siendo exactamente la misma. Desde nuestros inicios, entendimos que no nos contrataban para llenar un silencio; nos confiaban la responsabilidad de convertir una reunión en un recuerdo imborrable.</p>
+            <p>A lo largo de los años, recorriendo desde los grandes salones de Zapopan hasta los patios más íntimos de Tlaquepaque y Tonalá, aprendimos nuestra lección más valiosa: cada familia celebra diferente.</p>
+            <p>Por eso decidimos romper el molde tradicional. Nos dimos cuenta de que no todas las historias necesitan el mismo volumen, así que evolucionamos para volvernos multifacéticos. Hoy, nos enorgullece ser la agrupación que se adapta a tu momento, ofreciendo desde la cercanía romántica de un Dueto o un Trío Tradicional, hasta la versatilidad de un Trimariachi,
