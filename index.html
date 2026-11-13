@@ -146,3 +146,324 @@
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
+
+        /* Sección Servicios */
+        .servicios-section {
+            padding: 80px 8%;
+            background-color: #0a0a0a;
+        }
+        .servicios-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .servicios-imagen {
+            flex: 1;
+            min-width: 300px;
+        }
+        .servicios-imagen img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+        .servicios-lista {
+            flex: 1.5;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .tarjeta {
+            background-color: #1a1a1a;
+            border-left: 4px solid #d4af37;
+            padding: 25px;
+            border-radius: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .tarjeta-icono {
+            font-size: 2rem;
+            color: #d4af37;
+        }
+        .tarjeta-contenido h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        /* Sección Repertorio Musical */
+        .lista-canciones-section {
+            padding: 80px 8%;
+            background-color: #111111;
+        }
+        .repertorio-musica-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .repertorio-musica-imagen {
+            flex: 1;
+            min-width: 300px;
+        }
+        .repertorio-musica-imagen img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+        .columnas-canciones {
+            flex: 2;
+            min-width: 300px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+        }
+        .columnas-canciones ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+        .columnas-canciones li {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            color: #cccccc;
+        }
+
+        /* Sección Nuestras Presentaciones (Grid de 4 videos) */
+        .presentaciones-section {
+            padding: 80px 8%;
+            background-color: #050505;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Botón Flotante de WhatsApp */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .historia, .servicios-container, .repertorio-musica-wrapper {
+                flex-direction: column;
+            }
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SECCIÓN INICIO / HEADER -->
+    <header class="hero">
+        <div class="hero-content">
+            <img src="Logo.png" alt="Trimariachi Familiar Logo" class="logo">
+            <h1>Trimariachi Familiar</h1>
+            <p class="subtitle">Elegancia, confianza y el mejor entretenimiento para tus eventos más especiales.</p>
+            <p class="highlight">Más de 40 años de experiencia nos respaldan.</p>
+        </div>
+    </header>
+
+    <!-- VIDEO 1: DEBAJO DEL HEADER -->
+    <section class="video-destacado-section">
+        <div class="video-destacado-container">
+            <div class="custom-video-wrapper">
+                <video autoplay loop muted playsinline>
+                    <source src="https://drive.google.com/uc?export=download&id=1dc9bp4EOgFe5JUpcyf96ahTrYp1N1INh" type="video/mp4">
+                </video>
+                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NUESTRA HISTORIA -->
+    <section class="historia">
+        <div class="historia-texto">
+            <h2>Nuestra Historia: Cuatro Décadas Afinadas al Ritmo de tu Familia 🎻✨</h2>
+            <p>Todo comenzó en 1985 con una premisa muy sencilla: la música en vivo no solo se escucha, se siente.</p>
+            <p>Cuando Trimariachi Familiar tocó sus primeros acordes hace casi 40 años, la Zona Metropolitana de Guadalajara era distinta, pero la emoción de las familias tapatías al celebrar la vida sigue siendo exactamente la misma. Desde nuestros inicios, entendimos que no nos contrataban para llenar un silencio; nos confiaban la responsabilidad de convertir una reunión en un recuerdo imborrable.</p>
+            <p>A lo largo de los años, recorriendo desde los grandes salones de Zapopan hasta los patios más íntimos de Tlaquepaque y Tonalá, aprendimos nuestra lección más valiosa: cada familia celebra diferente.</p>
+            <p>Por eso decidimos romper el molde tradicional. Nos dimos cuenta de que no todas las historias necesitan el mismo volumen, así que evolucionamos para volvernos multifacéticos. Hoy, nos enorgullece ser la agrupación que se adapta a tu momento, ofreciendo desde la cercanía romántica de un Dueto o un Trío Tradicional, hasta la versatilidad de un Trimariachi, Cuarteto o la majestuosidad de un Quinteto.</p>
+            <p>Hoy, seguimos llevando nuestra tradición a Guadalajara, Tlajomulco, El Salto y toda la ZMG, con el mismo corazón de 1985 pero con la maestría de toda una vida.</p>
+        </div>
+        <div class="historia-imagen">
+            <img src="Story.jpg" alt="Historia de Trimariachi Familiar">
+        </div>
+    </section>
+
+    <!-- VIDEO 2: NUEVO VIDEO ENTRE HISTORIA Y SERVICIOS -->
+    <section class="video-destacado-section" style="padding-top: 20px;">
+        <div class="video-destacado-container">
+            <div class="custom-video-wrapper">
+                <video autoplay loop muted playsinline>
+                    <source src="https://drive.google.com/uc?export=download&id=1VrbZcuXU-9PRXuKGlEDqO0RO2hIgiaXU" type="video/mp4">
+                </video>
+                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NUESTROS SERVICIOS -->
+    <section class="servicios-section">
+        <div class="section-title">
+            <h2>NUESTROS SERVICIOS</h2>
+            <hr>
+        </div>
+        <div class="servicios-container">
+            <div class="servicios-imagen">
+                <img src="Trompeta.jpg" alt="Mariachi con trompeta">
+            </div>
+            <div class="servicios-lista">
+                <div class="tarjeta">
+                    <div class="tarjeta-icono">🎵</div>
+                    <div class="tarjeta-contenido">
+                        <h3>TRÍO VERSÁTIL</h3>
+                        <p>Con más de 40 años de experiencia nos hemos convertido en el grupo musical favorito de Guadalajara, interpretando un amplio repertorio.</p>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-icono">🎵</div>
+                    <div class="tarjeta-contenido">
+                        <h3>TRÍO ROMÁNTICO</h3>
+                        <p>Si quieres sorprender, dar un pequeño detalle romántico a algún ser querido, somos tu mejor opción con nuestro repertorio romántico.</p>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-icono">🎵</div>
+                    <div class="tarjeta-contenido">
+                        <h3>SERENATAS</h3>
+                        <p>Somos un grupo 100% profesional, por eso te colaboramos en esa ocasión especial, con una excelente presencia e interpretación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN REPERTORIO MUSICAL -->
+    <section class="lista-canciones-section">
+        <div class="section-title">
+            <h2>Repertorio Musical</h2>
+            <hr>
+        </div>
+        <div class="repertorio-musica-wrapper">
+            <div class="repertorio-musica-imagen">
+                <img src="Guitarra.jpg" alt="Mariachi con guitarra">
+            </div>
+            <div class="columnas-canciones">
+                <ul>
+                    <li>17 años</li>
+                    <li>A mi manera</li>
+                    <li>Bésame mucho</li>
+                    <li>Caminos de Michoacán</li>
+                    <li>Cien años</li>
+                    <li>Como fui a enamorarme</li>
+                </ul>
+                <ul>
+                    <li>El rey</li>
+                    <li>El sinaloense</li>
+                    <li>Eso y más</li>
+                    <li>Hermoso cariño</li>
+                    <li>La Bikina</li>
+                    <li>La media vuelta</li>
+                </ul>
+                <ul>
+                    <li>Piel canela</li>
+                    <li>Piensa en mi</li>
+                    <li>Que chulos ojos</li>
+                    <li>Sabor a mi</li>
+                    <li>Secreto de amor</li>
+                    <li>Serenata Huasteca</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: NUESTRAS PRESENTACIONES -->
+    <section class="presentaciones-section">
+        <div class="section-title">
+            <h2>Nuestras Presentaciones</h2>
+            <hr>
+        </div>
+        <div class="video-grid">
+            <!-- Presentación 1 -->
+            <div class="custom-video-wrapper">
+                <video autoplay loop muted playsinline>
+                    <source src="https://drive.google.com/uc?export=download&id=1mARiP9jLlVzFWj4kBxI31bopGmAVnIjl" type="video/mp4">
+                </video>
+                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            </div>
+            
+            <!-- Presentación 2 -->
+            <div class="custom-video-wrapper">
+                <video autoplay loop muted playsinline>
+                    <source src="https://drive.google.com/uc?export=download&id=1WVTB6jJosrMZYP0gFxkQ1d4EOc2cSxFH" type="video/mp4">
+                </video>
+                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            </div>
+
+            <!-- Presentación 3 -->
+            <div class="custom-video-wrapper">
+                <video autoplay loop muted playsinline>
+                    <source src="https://drive.google.com/uc?export=download&id=1SaVpZseJICK1kmAjXlWiPcJJPB4Ut69Z" type="video/mp4">
+                </video>
+                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            </div>
+
+            <!-- Presentación 4 -->
+            <div class="custom-video-wrapper">
+                <video autoplay loop muted playsinline>
+                    <source src="https://drive.google.com/uc?export=download&id=1_1LfQ23kuUh1G8PDRMfRj0ZqwLErNY3x" type="video/mp4">
+                </video>
+                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTÓN DE WHATSAPP -->
+    <a href="https://wa.me/523312345678" target="_blank" class="whatsapp-btn">
+        Reservar lugar
+    </a>
+
+    <!-- SCRIPT PARA CONTROLAR EL SONIDO DE LOS VIDEOS -->
+    <script>
+        function toggleMute(btn) {
+            const video = btn.parentElement.querySelector('video');
+            if (video.muted) {
+                video.muted = false;
+                btn.innerHTML = '🔈 Silenciar';
+                // Opcional: Descomenta la siguiente línea si quieres que al desmutear uno, se muteen los demás
+                // muteOtherVideos(video);
+            } else {
+                video.muted = true;
+                btn.innerHTML = '🔊 Activar Sonido';
+            }
+        }
+    </script>
+
+</body>
+</html>
