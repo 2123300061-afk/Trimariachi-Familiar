@@ -68,7 +68,7 @@
             font-weight: bold;
         }
 
-        /* REPRODUCTOR DE VIDEO PERSONALIZADO (Sin pausa, solo audio) */
+        /* REPRODUCTOR DE VIDEO PERSONALIZADO */
         .custom-video-wrapper {
             position: relative;
             width: 100%;
@@ -81,7 +81,7 @@
         .custom-video-wrapper video {
             width: 100%;
             display: block;
-            pointer-events: none; /* Esto bloquea el clic de pausa o reproducir */
+            pointer-events: none; /* Bloquea clics para evitar pausas */
         }
         .mute-btn {
             position: absolute;
@@ -288,9 +288,8 @@
     <section class="video-destacado-section">
         <div class="video-destacado-container">
             <div class="custom-video-wrapper">
-                <!-- Enlace original provisto: https://drive.google.com/file/d/1dc9bp4EOgFe5JUpcyf96ahTrYp1N1INh/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
-                    <source src="https://drive.google.com/uc?export=download&id=1dc9bp4EOgFe5JUpcyf96ahTrYp1N1INh" type="video/mp4">
+                    <source src="Video.1" type="video/mp4">
                 </video>
                 <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
             </div>
@@ -316,9 +315,8 @@
     <section class="video-destacado-section" style="padding-top: 20px;">
         <div class="video-destacado-container">
             <div class="custom-video-wrapper">
-                <!-- Enlace original provisto: https://drive.google.com/file/d/1VrbZcuXU-9PRXuKGlEDqO0RO2hIgiaXU/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
-                    <source src="https://drive.google.com/uc?export=download&id=1VrbZcuXU-9PRXuKGlEDqO0RO2hIgiaXU" type="video/mp4">
+                    <source src="Video.2" type="video/mp4">
                 </video>
                 <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
             </div>
@@ -407,38 +405,34 @@
             <hr>
         </div>
         <div class="video-grid">
-            <!-- Presentación 1 -->
+            <!-- Presentación 1 (Reutilizamos el Video 2) -->
             <div class="custom-video-wrapper">
-                <!-- Original: https://drive.google.com/file/d/1mARiP9jLlVzFWj4kBxI31bopGmAVnIjl/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
-                    <source src="https://drive.google.com/uc?export=download&id=1mARiP9jLlVzFWj4kBxI31bopGmAVnIjl" type="video/mp4">
+                    <source src="Video.2" type="video/mp4">
                 </video>
                 <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
             </div>
             
             <!-- Presentación 2 -->
             <div class="custom-video-wrapper">
-                <!-- Original: https://drive.google.com/file/d/1WVTB6jJosrMZYP0gFxkQ1d4EOc2cSxFH/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
-                    <source src="https://drive.google.com/uc?export=download&id=1WVTB6jJosrMZYP0gFxkQ1d4EOc2cSxFH" type="video/mp4">
+                    <source src="Video.3" type="video/mp4">
                 </video>
                 <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
             </div>
 
             <!-- Presentación 3 -->
             <div class="custom-video-wrapper">
-                <!-- Original: https://drive.google.com/file/d/1SaVpZseJICK1kmAjXlWiPcJJPB4Ut69Z/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
-                    <source src="https://drive.google.com/uc?export=download&id=1SaVpZseJICK1kmAjXlWiPcJJPB4Ut69Z" type="video/mp4">
+                    <source src="Video.4" type="video/mp4">
                 </video>
                 <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
             </div>
 
             <!-- Presentación 4 -->
             <div class="custom-video-wrapper">
-                <!-- Original: https://drive.google.com/file/d/1_1LfQ23kuUh1G8PDRMfRj0ZqwLErNY3x/view?usp=sharing -->
                 <video autoplay loop muted playsinline>
-                    <source src="https://drive.google.com/uc?export=download&id=1_1LfQ23kuUh1G8PDRMfRj0ZqwLErNY3x" type="video/mp4">
+                    <source src="Video.5" type="video/mp4">
                 </video>
                 <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
             </div>
