@@ -1,8 +1,3 @@
-Tienes toda la razón, ya vi en tu captura que los archivos tienen la extensión `.mp4` correcta.
-
-Con los archivos ya listos y nombrados así en tu GitHub, aquí tienes el código definitivo. Solo tienes que copiar este texto y reemplazar todo lo que tienes en tu archivo `index.html`. En cuanto guardes los cambios, los videos empezarán a reproducirse solos.
-
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -73,42 +68,7 @@ Con los archivos ya listos y nombrados así en tu GitHub, aquí tienes el códig
             font-weight: bold;
         }
 
-        /* REPRODUCTOR DE VIDEO PERSONALIZADO */
-        .custom-video-wrapper {
-            position: relative;
-            width: 100%;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            border: 1px solid #333;
-            background-color: #000;
-        }
-        .custom-video-wrapper video {
-            width: 100%;
-            display: block;
-            pointer-events: none; /* Bloquea clics para evitar pausas */
-        }
-        .mute-btn {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            border: 1px solid #d4af37;
-            padding: 8px 16px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-family: 'Segoe UI', sans-serif;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-        .mute-btn:hover {
-            background-color: #d4af37;
-            color: #000;
-        }
-
-        /* Contenedores de video */
+        /* CONTENEDOR PARA VIDEOS DE GOOGLE DRIVE */
         .video-destacado-section {
             padding: 60px 8%;
             background-color: #0a0a0a;
@@ -117,6 +77,24 @@ Con los archivos ya listos y nombrados así en tu GitHub, aquí tienes el códig
         .video-destacado-container {
             max-width: 900px;
             margin: 0 auto;
+        }
+        .video-iframe-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            border: 1px solid #333;
+            background-color: #000;
+        }
+        .video-iframe-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         /* Sección Nuestra Historia */
@@ -289,14 +267,11 @@ Con los archivos ya listos y nombrados así en tu GitHub, aquí tienes el códig
         </div>
     </header>
 
-    <!-- VIDEO 1: ENTRE HEADER E HISTORIA -->
+    <!-- VIDEO 1: ENTRE HEADER E HISTORIA (Drive) -->
     <section class="video-destacado-section">
         <div class="video-destacado-container">
-            <div class="custom-video-wrapper">
-                <video autoplay loop muted playsinline>
-                    <source src="Video.1.mp4" type="video/mp4">
-                </video>
-                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            <div class="video-iframe-wrapper">
+                <iframe src="https://drive.google.com/file/d/1dc9bp4EOgFe5JUpcyf96ahTrYp1N1INh/preview" allow="autoplay" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -316,14 +291,11 @@ Con los archivos ya listos y nombrados así en tu GitHub, aquí tienes el códig
         </div>
     </section>
 
-    <!-- VIDEO 2: ENTRE HISTORIA Y SERVICIOS -->
+    <!-- VIDEO 2: ENTRE HISTORIA Y SERVICIOS (Drive) -->
     <section class="video-destacado-section" style="padding-top: 20px;">
         <div class="video-destacado-container">
-            <div class="custom-video-wrapper">
-                <video autoplay loop muted playsinline>
-                    <source src="Video.2.mp4" type="video/mp4">
-                </video>
-                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            <div class="video-iframe-wrapper">
+                <iframe src="https://drive.google.com/file/d/1VrbZcuXU-9PRXuKGlEDqO0RO2hIgiaXU/preview" allow="autoplay" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -410,36 +382,24 @@ Con los archivos ya listos y nombrados así en tu GitHub, aquí tienes el códig
             <hr>
         </div>
         <div class="video-grid">
-            <!-- Presentación 1 -->
-            <div class="custom-video-wrapper">
-                <video autoplay loop muted playsinline>
-                    <source src="Video.2.mp4" type="video/mp4">
-                </video>
-                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            <!-- Presentación 1 (Drive) -->
+            <div class="video-iframe-wrapper">
+                <iframe src="https://drive.google.com/file/d/1mARiP9jLlVzFWj4kBxI31bopGmAVnIjl/preview" allow="autoplay" allowfullscreen></iframe>
             </div>
             
-            <!-- Presentación 2 -->
-            <div class="custom-video-wrapper">
-                <video autoplay loop muted playsinline>
-                    <source src="Video.3.mp4" type="video/mp4">
-                </video>
-                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            <!-- Presentación 2 (Drive) -->
+            <div class="video-iframe-wrapper">
+                <iframe src="https://drive.google.com/file/d/1WVTB6jJosrMZYP0gFxkQ1d4EOc2cSxFH/preview" allow="autoplay" allowfullscreen></iframe>
             </div>
 
-            <!-- Presentación 3 -->
-            <div class="custom-video-wrapper">
-                <video autoplay loop muted playsinline>
-                    <source src="Video.4.mp4" type="video/mp4">
-                </video>
-                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            <!-- Presentación 3 (Drive) -->
+            <div class="video-iframe-wrapper">
+                <iframe src="https://drive.google.com/file/d/1SaVpZseJICK1kmAjXlWiPcJJPB4Ut69Z/preview" allow="autoplay" allowfullscreen></iframe>
             </div>
 
-            <!-- Presentación 4 -->
-            <div class="custom-video-wrapper">
-                <video autoplay loop muted playsinline>
-                    <source src="Video.5.mp4" type="video/mp4">
-                </video>
-                <button class="mute-btn" onclick="toggleMute(this)">🔊 Activar Sonido</button>
+            <!-- Presentación 4 (Drive) -->
+            <div class="video-iframe-wrapper">
+                <iframe src="https://drive.google.com/file/d/1_1LfQ23kuUh1G8PDRMfRj0ZqwLErNY3x/preview" allow="autoplay" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -449,21 +409,5 @@ Con los archivos ya listos y nombrados así en tu GitHub, aquí tienes el códig
         Reservar lugar
     </a>
 
-    <!-- SCRIPT PARA CONTROLAR EL SONIDO DE LOS VIDEOS -->
-    <script>
-        function toggleMute(btn) {
-            const video = btn.parentElement.querySelector('video');
-            if (video.muted) {
-                video.muted = false;
-                btn.innerHTML = '🔈 Silenciar';
-            } else {
-                video.muted = true;
-                btn.innerHTML = '🔊 Activar Sonido';
-            }
-        }
-    </script>
-
 </body>
 </html>
-
-```
